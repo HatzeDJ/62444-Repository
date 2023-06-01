@@ -2,6 +2,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import fastparquet
 
 
 def create_scatterplot(df, x_col, y_col, title, xlabel, ylabel):
