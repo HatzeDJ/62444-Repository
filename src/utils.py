@@ -62,3 +62,21 @@ def load_data_from_google_drive(url):
     url_processed='https://drive.google.com/uc?id=' + url.split('/')[-2]
     df = pd.read_csv(url_processed)
     return df
+
+
+import matplotlib.pyplot as plt
+
+#Defines histogram plot
+def plot_histogram(data, bins=10, title='', subplot=None):
+    if subplot is None:
+        plt.hist(data, bins=bins)
+        plt.title(title)
+        plt.xlabel('Values')
+        plt.ylabel('Frequency')
+        plt.show()
+    else:
+        plt.subplot(subplot)
+        plt.hist(data, bins=bins)
+        plt.title(title)
+        plt.xlabel('Values')
+        plt.ylabel('Frequency')
