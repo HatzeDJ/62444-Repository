@@ -1,7 +1,11 @@
 import matplotlib.pyplot as plt
 
-def plot_histogram(data, bins=10, title='', xmin=None, xmax=None, xlabel = None):
-    plt.hist(data, bins=bins, edgecolor='black')
+def plot_histogram(data, bins=10, title='', xmin=None, xmax=None, xlabel = None, color = None):
+    if color is not None: 
+        color = color
+    else: 
+        color = "darkblue"
+    plt.hist(data, bins=bins, edgecolor='black', color = color)
     plt.title(title)
     if xlabel is not None: 
         plt.xlabel(xlabel)
