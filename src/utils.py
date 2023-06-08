@@ -64,4 +64,20 @@ def load_data_from_google_drive(url):
     return df
 
 
+def split_date(df, DateColumn):
+    #This function takes a dataframe, and a date coloumn, and splits it into
+    #hour of the day
+    #day of the week
+    #month of the year
+    #It returns the same dataframe/dataset with 3 new coloumns
+    #Inputs are: 
+    #df: a dataframe, or dataset
+    #DateColumn: Name of datecoloumn as string
+    df['Hour'] = pd.to_datetime(df[DateColumn]).dt.hour
+    df['DayOfWeek'] = pd.to_datetime(df[DateColumn]).dt.day_name()
+    df['Month'] = pd.to_datetime(df[DateColumn]).dt.month_name()
+    return df
+
+
+
 
