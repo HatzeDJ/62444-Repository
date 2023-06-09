@@ -81,5 +81,5 @@ def split_date(df, DateColumn):
 
 chronological_order_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
-chronological_order_month = ['January', 'February', 'March']
+chronological_order_month = ['January', 'February', 'March', 'April', 'May', 'June']
 
