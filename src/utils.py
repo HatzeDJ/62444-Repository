@@ -83,3 +83,33 @@ chronological_order_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 
 chronological_order_month = ['January', 'February', 'March', 'April', 'May', 'June']
 
+def PlotTemporalRelationshipOne(mean_fare_pr_date, xlabel, ylabel, title): 
+    # Create the line plot
+    plt.plot(mean_fare_pr_date.index, mean_fare_pr_date.values)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.show()
+
+def PlotTemporalRelationshipBoth(Group1, Group2, label1, label2, color1, color2, xlabel, ylabel, title): 
+    plt.plot(Group1.index, Group1, marker='o', label=label1, color = color1)
+    plt.plot(Group2.index, Group2, marker='o', label=label2, color = color2)
+    # Add labels and title
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    # Add legend
+    plt.legend()
+    # Customize the plot
+    plt.grid(True)
+    # Display the plot
+    plt.show()
+
+def PlotBarChart(CountsData, title, xlabel, ylabel, xlabelrotation, color): 
+        plt.bar(CountsData.index, CountsData, edgecolor = 'black', color = color)
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.ticklabel_format(axis = 'y', style = 'plain')
+        plt.xticks(rotation = xlabelrotation)
+        plt.show()
